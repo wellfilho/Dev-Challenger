@@ -1,0 +1,300 @@
+:root {
+  --color01: #d2872c;
+  --color02: #766f68;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+header {
+  width: 100%;
+  padding: 30px;
+  margin-bottom: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a#logo {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--color01);
+}
+
+header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color02);
+  font-size: 2em;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  display: none;
+}
+
+header button:focus ~ ul#menu {
+  visibility: visible;
+}
+
+header ul#menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul#menu li {
+  margin-left: 20px;
+  list-style: none;
+}
+
+header ul#menu li a {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--color02);
+}
+
+main {
+  padding: 10px;
+}
+
+main section.content {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+main section.content div.box {
+  position: relative;
+  left: 5%;
+  height: 80%;
+}
+
+main section.content div.box h1 {
+  width: 500px;
+  font-size: 4em;
+  color: var(--color02);
+  margin-bottom: 20px;
+}
+
+main section.content div.box p {
+  width: 350px;
+  font-size: 1.5em;
+  color: var(--color02);
+  margin-bottom: 40px;
+}
+
+main section.content div.box button {
+  padding: 10px 70px;
+  font-size: 1.2em;
+  font-weight: 600;
+  background-color: var(--color01);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+main section.content img {
+  position: relative;
+  right: 5%;
+  z-index: -1;
+  width: 700px;
+}
+
+@media (max-width: 1150px) {
+  main section.content div.box {
+    left: 5%;
+    height: 80%;
+  }
+
+  main section.content div.box h1 {
+    width: 500px;
+    font-size: 4em;
+  }
+
+  main section.content div.box p {
+    width: 350px;
+    font-size: 1.5em;
+  }
+
+  main section.content div.box button {
+    padding: 10px 70px;
+    font-size: 1.2em;
+  }
+
+  main section.content img {
+    right: 5%;
+    width: 650px;
+  }
+}
+
+@media (max-width: 1050px) {
+  main section.content div.box {
+    left: 10%;
+    height: 80%;
+  }
+
+  main section.content div.box h1 {
+    width: 500px;
+    font-size: 3em;
+  }
+
+  main section.content div.box p {
+    width: 300px;
+    font-size: 1.2em;
+  }
+
+  main section.content div.box button {
+    padding: 10px 60px;
+    font-size: 1.2em;
+  }
+
+  main section.content img {
+    right: 10%;
+    width: 600px;
+  }
+}
+
+@media (max-width: 925px) {
+  main section.content div.box {
+    left: 5%;
+  }
+
+  main section.content div.box h1 {
+    width: 300px;
+    font-size: 2.5em;
+  }
+
+  main section.content div.box p {
+    width: 250px;
+    font-size: 1em;
+  }
+
+  main section.content div.box button {
+    padding: 10px 50px;
+    font-size: 1em;
+  }
+
+  main section.content img {
+    right: 5%;
+    width: 550px;
+  }
+}
+
+@media (max-width: 800px) {
+  header a#logo {
+    font-size: 2.5em;
+  }
+  header ul#menu li a {
+    font-size: 1.5em;
+    font-weight: 500;
+    color: var(--color02);
+  }
+
+  main section.content {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main section.content div.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 0;
+  }
+
+  main section.content div.box h1 {
+    text-align: center;
+    width: 500px;
+    font-size: 4em;
+  }
+
+  main section.content div.box p {
+    text-align: center;
+    width: 400px;
+    font-size: 1.5em;
+  }
+
+  main section.content div.box button {
+    padding: 20px 100px;
+    border-radius: 20px;
+    font-size: 2em;
+  }
+
+  main section.content img {
+    right: 0;
+    width: 600px;
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header button {
+    display: initial;
+  }
+
+  header ul#menu {
+    width: 100%;
+    height: 50px;
+    justify-content: space-around;
+    visibility: hidden;
+  }
+
+  header ul#menu li {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  main section.content div.box h1 {
+    text-align: center;
+    width: 500px;
+    font-size: 3.5em;
+  }
+
+  main section.content div.box p {
+    text-align: center;
+    width: 400px;
+    font-size: 1.5em;
+  }
+
+  main section.content div.box button {
+    padding: 10px 80px;
+    border-radius: 20px;
+    font-size: 1.5em;
+  }
+
+  main section.content img {
+    right: 0;
+    width: 500px;
+  }
+}
